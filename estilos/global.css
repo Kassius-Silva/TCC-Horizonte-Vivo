@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Peta:wght@100..900&display=swap');
+
+:root {
+    --cor-fundo: #FFF9E5;
+    --fonte-principal: 'Lexend Peta';
+    --destaque: #A33C25;
+    --alerta: #F27405;
+    --grama: #03A678;
+    --mato: #02735E;
+
+}
+#redes {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+}
+.rede {
+    width: 30px;
+}
+ul {
+    margin: 0;
+    padding-left: 20px;
+}
+.button a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.button {
+    position: relative;
+    padding: 10px 30px;
+    background-color: white;
+    border: 1px solid;
+    box-shadow: 5px 5px black;
+    font-size: 16px;
+    margin: 20px 0;
+}
+.titulo {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.dtq {
+    color: var(--destaque);
+    font-weight: bold;
+}
+.principal {
+  color: var(--mato) !important;
+}
+
+p,h1 {
+    margin: 0;
+}
+* {
+    font-family: var(--fonte-principal) ;
+
+}
+body {
+    margin: 0;
+    background-color: var(--cor-fundo);
+}
+.saiba-mais {
+    background-color: var(--alerta) !important;
+}
+.associado {
+    background-color:  var(--grama)!important;
+}
+.doar {
+    background-color: var(--mato) !important;
+}
+
+.button:active {
+    transform: translate(5px, 5px);
+    box-shadow: none;
+}
+.descricao {
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+  } 
+  

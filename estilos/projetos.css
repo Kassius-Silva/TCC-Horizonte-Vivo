@@ -1,0 +1,118 @@
+.card img {
+  width: 350px;
+  border-radius: 10px;
+}
+.card {
+  transition: all .25s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+.carousel {
+  position: relative;
+  width: 1000px;
+  height: 400px;
+  overflow: hidden;
+  border: 3px solid #fff;
+  border-radius: 10px;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+  display: block;
+  opacity: 1;
+  z-index: 1;
+}
+.titulo {
+  margin: 20px;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.caption {
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+  color: white;
+  font-size: 24px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 12px 20px;
+  border-radius: 5px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.3);
+  color: white;
+  font-size: 36px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.3s;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(255,255,255,0.6);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.descricao {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.card .descricao {
+  width: max-content ;
+}
+.card:hover .descricao {
+  opacity: 1;
+}

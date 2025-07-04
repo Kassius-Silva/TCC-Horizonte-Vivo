@@ -1,0 +1,130 @@
+@import url(global.css);
+
+#boas-vindas {
+    display: flex;
+    width: 75%;
+    height: 70vh;
+    align-items: center;
+    justify-content: space-between;
+}
+#boas-vindas img {
+    width: 400px;
+    animation: alternate 5s float infinite ease-in-out ;
+}
+#ajuda { 
+    background: url(../imagens/nuvens.png);
+    
+}
+
+span {
+    color: var(--alerta)  ;
+    transition: all .25s;
+}
+
+
+#sobre-nos, #projetos, #ajuda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}   
+#sobre-nos {
+    flex-direction: row;
+    padding: 10px;
+    text-align: left;
+    margin: 100px;
+}
+#projetos .paragrafo {
+    width: 950px;
+}
+#sobre-nos .titulo {
+    margin: 30px 0;
+}
+#sobre-nos img {
+    margin: 20px;
+    width: 500px;
+}
+.paragrafo {
+    font-size: 20px;
+}
+.espaco {
+    margin-left: 16px;
+}
+main {
+    display: flex;
+    justify-content: center;
+}
+h1 {
+    width: 500px;
+    font-size: 40px;
+}
+.doar {
+    background-color: var(--mato) ;
+}
+.subtitulo {
+    margin: 20px 0;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#colaboracoes {
+    display: flex;
+    margin-bottom: 50px ;
+    height: 80vh;
+
+}
+.opcoes img {
+    width: 200px;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(30px);
+    }
+}
+
+
+
+#carrossel {
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+    position: relative;
+    
+}
+
+.card {
+    padding: 15px;
+    width: 200px;
+    color: white;
+}
+#carrossel a:hover {
+    transform: scale(1.05);
+
+}
+
+#carrossel a:active {
+    transform: scale(0.95);
+}
+
+#carrossel a:nth-child(1) {
+    background-color: var(--alerta);
+    border-radius: 15px;
+}
+#carrossel a:nth-child(2) {
+    background-color: var(--grama);
+    border-radius: 15px;
+}
+#carrossel a:nth-child(3) {
+    background-color: var(--mato);
+    border-radius: 15px;
+}
+
+
+.opcoes:nth-child(-n+2) {
+border-right: 1px solid;
+}
+

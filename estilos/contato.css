@@ -1,0 +1,44 @@
+@import url(global.css);
+
+#pagina {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+
+
+.dados {
+    width:300px;
+    font-size: 15px;
+}
+#contato {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center; 
+}
+#formulario {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    gap: 20px;
+}
+
+input[type="submit"] {
+    width: 100px;
+    background-color: var(--alerta);
+    border: solid 1px;
+}
+input {
+    height: 30px;
+}
+textarea {
+    resize: none;
+    height: 100px;
+}
+#formulario .descricao {
+    font-size: 15px;
+    width: 700px;
+}

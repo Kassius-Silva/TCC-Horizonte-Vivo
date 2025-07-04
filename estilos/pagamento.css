@@ -1,0 +1,95 @@
+ @import url(global.css);
+ 
+ * {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+    }
+#legal {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+    .container {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 450px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #555;
+      cursor: pointer;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    select {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 20px;
+      border: 1.5px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+      transition: border-color 0.3s;
+    }
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    input[type="email"]:focus,
+    select:focus {
+      border-color: var(--alerta);
+      outline: none;
+    }
+    .payment-methods {
+      margin-bottom: 20px;
+    }
+    .payment-methods label {
+      display: inline-block;
+      margin-right: 15px;
+      font-weight: normal;
+      cursor: pointer;
+    }
+    .payment-methods input[type="radio"] {
+      margin-right: 6px;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+    .card-fields,
+    .boleto-info,
+    .pix-info {
+      display: none;
+      margin-bottom: 20px;
+      border: 1px solid #eee;
+      padding: 15px;
+      border-radius: 5px;
+      background: #fafafa;
+    }
+    button {
+      width: 100%;
+      background-color: var(--alerta);
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+    @media (max-width: 500px) {
+      .container {
+        padding: 20px;
+      }
+    }

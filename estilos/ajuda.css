@@ -1,0 +1,32 @@
+@import url(global.css);
+
+.box {
+    display: flex;
+    margin: 100px;
+    border-bottom: 1px solid ;
+    padding-bottom: 100px;
+}
+.texto:nth-child(1) {
+    border: none;
+}
+.tipo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    border-left: 1px solid;
+    padding-left: 50px;
+}
+img {
+    width: 400px;
+}
+.type p {
+    
+    color: var(--alerta);
+}

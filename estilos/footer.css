@@ -1,0 +1,33 @@
+:root {
+    --footer: #ffaa6d;
+}
+
+.footer {
+    height: 30vh;
+    background-color: var(--footer);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+.contato {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.contato img {
+    width: 30px;
+}
+
+.contato .link {
+    color: black;
+    width: 200px;
+}
+.contato .link::before {
+    content: none;
+}
+
+#contatos {
+    display: flex;
+    gap: 20px;
+}

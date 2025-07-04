@@ -1,0 +1,38 @@
+@import url(global.css);
+
+#pagina {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin: 100px;
+}
+
+.card {
+  display: flex;
+  width: 500px;
+  align-items: center;
+  margin: 15px;
+  background-color: rgb(238, 238, 238);
+  padding: 10px;
+  border-radius: 10px;
+
+}
+.card .descricao {
+  width: 300px !important;
+}
+.card img {
+  width: 200px;
+}

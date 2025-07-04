@@ -1,0 +1,64 @@
+@import url(global.css);
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: var(--destaque);
+    box-sizing: border-box;
+    justify-content: space-between;
+    padding: 10px 100px 10px 0;
+    }
+.ativo {
+    color: var(--alerta)!important;
+}
+.link:hover, .link:hover span {
+    color: var(--alerta);
+
+}
+#logo .link::before {
+    content: none;
+}
+.link::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    border-radius: 50%;
+    left: 50%;
+    background-color: var(--alerta);
+    opacity: 0;
+    transition: all .25s;
+}
+.link:hover::before {
+    opacity: 1;
+}
+
+.link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .25s;
+}
+
+#logo img {
+    width: 70px;
+}
+#link-principal {
+    display: flex;
+    list-style: none;
+    width: 70%;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    
+}

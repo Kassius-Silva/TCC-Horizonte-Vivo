@@ -1,0 +1,30 @@
+
+#projeto {
+    display: flex;
+    margin: 50px;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.container .descricao {
+    width: 700px;
+}
+.container img {
+    width: 500px;
+}
+.parceria img {
+    width: 200px;
+}
+.parceria {
+    border-left: 1px solid;
+    padding-left: 30px;
+    text-align: center;
+}
+.parceria .titulo {
+    margin: 0;
+}

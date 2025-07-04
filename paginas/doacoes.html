@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doações</title>
+    <link rel="stylesheet" href="../estilos/header.css">
+    <link rel="stylesheet" href="../estilos/doacoes.css">
+    <link rel="stylesheet" href="../estilos/global.css">
+    <link rel="stylesheet" href="../estilos/footer.css">
+    <link rel="shortcut icon" href="../imagens/icone.svg" type="image/x-icon">
+</head>
+<body>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+    <header>
+        <nav>
+            <div id="logo">
+                <a href="../index.html" class="link">
+                    <img src="../imagens/icone.svg" alt="">
+                    Horizonte Vivo
+                </a>
+            </div>
+            <ul id="link-principal">
+                <li><a href="./quem-somos.html" class="link">Quem somos</a></li>
+                <li><a href="./projetos.html" class="link">Projetos</a></li>
+                <li><a href="./ajuda.html" class="link">Ajuda</a></li>
+                <li><a href="./parcerias.html" class="link">Parceria</a></li>
+                <li><a href="./contato.html" class="link ">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Ajude a Transformar Vidas</h1>
+      <p>Sua doação apoia crianças carentes e faz a diferença.</p>
+  </section>
+
+
+  <section class="form-section">
+      <h2>Escolha o Valor e doe com segurança</h2>
+      <form>
+          <input type="text" placeholder="Valor" required="required" id="inputValor">
+          <select name="" id="">
+            <option value="" disabled selected>Selecione um Projeto</option>
+            <option value="biblioteca">biblioteca</option>
+            <option value="matematica">matemática</option>
+            <option value="musica">música</option>
+            <option value="teatro">teatro</option>
+            <option value="locucao">locução</option>
+          </select>
+          <div class="amount-options">
+
+              <label><input type="radio" name="amount" value="50" class="valor">R$ 50</label>
+              <label><input type="radio" name="amount" value="100" class="valor">R$ 100</label>
+              <label><input type="radio" name="amount" value="200" class="valor">R$ 200</label>
+              <label><input type="radio" name="amount" value="500" class="valor">R$ 500</label>
+              <div id="custom-amount-field" style="display: none;">
+                  <input type="number" name="custom-amount" placeholder="Digite o Valor">
+              </div>
+          </div>
+           <button id="btnDoar" class="cta-button">Quero Doar Agora</button>
+      </form>
+  </section>
+
+  <footer class="footer">
+    <p class="titulo">Contatos</p>
+    <div id="contatos">
+        <div class="contato">
+            <a href="https://www.google.com/maps/search/?api=1&query=Avenida+Industrial+Belgraf,+400,+Eldorado+do+Sul,+RS,+92990-000" target="_blank" class="link">
+                <img src="../imagens/waypoint.png" alt="">
+                Avenida Industrial Belgraf, 400, Eldorado do Sul - RS, 92.990-000
+            </a>
+        </div>
+        <div class="contato">
+            <a href="https://wa.me/5551997829405" class="link" target="_blank">
+                <img src="../imagens/whatsapp-svgrepo-com.svg" alt="">
+                +55 (51) 99782-9405
+            </a>
+        </div>
+        <div class="contato">
+            <a href="mailto:contato@institutohorizontevivo.org" class="link">
+                <img src="../imagens/email-svgrepo-com.svg" alt="">
+                contato@institutohorizontevivo.org
+            </a>
+        </div>
+    </div>
+    <ul id="redes">
+        <li> <a href="https://www.instagram.com/horizontevivo2025?igsh=MTNqMHoxY2RiNDZ3dA==" target="_blank"><img src="../imagens/insta.svg" alt="" class="rede"></a></li>
+        <li> <a href="https://institutoagora.org/" target="_blank"><img src="../imagens/logo_redes - Editado 2.png" alt="" class="rede" style="width: 50px;"></a></li>
+    </ul>
+    <p>© 2021 Instituto Cultural e Social Ágora . Todos os direitos reservados. Site desenvolvido por PrismaTech</p>
+</footer>
+
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+      <script src="../java/doacoes.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Página de Pagamento</title>
+  <link rel="stylesheet" href="../estilos/pagamento.css">
+  <link rel="stylesheet" href="../estilos/global.css">
+  <link rel="stylesheet" href="../estilos/footer.css">
+  <link rel="stylesheet" href="../estilos/header.css">
+
+</head>
+<body>
+  <header>
+        <nav>
+            <div id="logo">
+                <a href="../index.html" class="link">
+                    <img src="../imagens/icone.svg" alt="">
+                    Horizonte Vivo
+                </a>
+            </div>
+            <ul id="link-principal">
+                <li><a href="./quem-somos.html" class="link">Quem somos</a></li>
+                <li><a href="./projetos.html" class="link">Projetos</a></li>
+                <li><a href="./ajuda.html" class="link">Ajuda</a></li>
+                <li><a href="./parcerias.html" class="link ">Parceria</a></li>
+                <li><a href="./contato.html" class="link">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+ <div id="legal">
+   <div class="container">
+     <h1>Pagamento</h1>
+  
+     <form id="paymentForm" novalidate>
+       <label for="name">Nome Completo</label>
+       <input type="text" id="name" name="name" required placeholder="Seu nome" />
+  
+       <label for="email">E-mail</label>
+       <input type="email" id="email" name="email" required placeholder="seu@email.com" />
+  
+       <label>Forma de Pagamento</label>
+       <div class="payment-methods">
+         <label><input type="radio" name="paymentMethod" id="card" value="card" required /> Cartão de Crédito</label>
+         <label><input type="radio" name="paymentMethod" id="boleto" value="boleto" /> Boleto Bancário</label>
+         <label><input type="radio" name="paymentMethod" id="pix" value="pix" /> Pix</label>
+       </div>
+  
+       <div class="card-fields">
+         <label for="cardNumber">Número do Cartão</label>
+         <input type="text" id="cardNumber" name="cardNumber" maxlength="19" placeholder="0000 0000 0000 0000" />
+  
+         <label for="cardExpiry">Validade (MM/AA)</label>
+         <input type="text" id="cardExpiry" name="cardExpiry" maxlength="5" placeholder="MM/AA" />
+  
+         <label for="cardCvv">CVV</label>
+         <input type="number" id="cardCvv" name="cardCvv" maxlength="4" placeholder="123" />
+       </div>
+  
+       <div class="boleto-info">
+         <p>O boleto será gerado após a confirmação do pedido.</p>
+       </div>
+  
+       <div class="pix-info">
+         <p>Após confirmar, você verá o QR code para pagamento via Pix.</p>
+       </div>
+  
+       <button type="submit">Finalizar Pagamento</button>
+     </form>
+   </div>
+ </div>
+ <footer class="footer">
+  <p class="titulo">Contatos</p>
+  <div id="contatos">
+      <div class="contato">
+          <a href="https://www.google.com/maps/search/?api=1&query=Avenida+Industrial+Belgraf,+400,+Eldorado+do+Sul,+RS,+92990-000" target="_blank" class="link">
+              <img src="../imagens/waypoint.png" alt="">
+              Avenida Industrial Belgraf, 400, Eldorado do Sul - RS, 92.990-000
+          </a>
+      </div>
+      <div class="contato">
+          <a href="https://wa.me/5551997829405" class="link" target="_blank">
+              <img src="../imagens/whatsapp-svgrepo-com.svg" alt="">
+              +55 (51) 99782-9405
+          </a>
+      </div>
+      <div class="contato">
+          <a href="mailto:contato@institutohorizontevivo.org" class="link">
+              <img src="../imagens/email-svgrepo-com.svg" alt="">
+              contato@institutohorizontevivo.org
+          </a>
+      </div>
+  </div>
+  <ul id="redes">
+      <li> <a href="https://www.instagram.com/horizontevivo2025?igsh=MTNqMHoxY2RiNDZ3dA==" target="_blank"><img src="../imagens/insta.svg" alt="" class="rede"></a></li>
+      <li> <a href="https://institutoagora.org/" target="_blank"><img src="../imagens/logo_redes - Editado 2.png" alt="" class="rede" style="width: 50px;"></a></li>
+  </ul>
+  <p>© 2021 Instituto Cultural e Social Ágora . Todos os direitos reservados. Site desenvolvido por PrismaTech</p>
+</footer>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const radios = document.querySelectorAll('input[name="paymentMethod"]');
+      const cardFields = document.querySelector(".card-fields");
+      const boletoInfo = document.querySelector(".boleto-info");
+      const pixInfo = document.querySelector(".pix-info");
+      const form = document.getElementById("paymentForm");
+
+      function atualizarCampos() {
+        const selecionado = document.querySelector('input[name="paymentMethod"]:checked');
+        if (!selecionado) {
+          cardFields.style.display = "none";
+          boletoInfo.style.display = "none";
+          pixInfo.style.display = "none";
+          return;
+        }
+        cardFields.style.display = selecionado.value === "card" ? "block" : "none";
+        boletoInfo.style.display = selecionado.value === "boleto" ? "block" : "none";
+        pixInfo.style.display = selecionado.value === "pix" ? "block" : "none";
+      }
+
+      radios.forEach(radio => {
+        radio.addEventListener("change", atualizarCampos);
+      });
+
+      atualizarCampos(); // chama no carregamento
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const paymentMethod = form.paymentMethod.value;
+
+        if (!name) {
+          alert("Por favor, preencha seu nome.");
+          form.name.focus();
+          return;
+        }
+
+        if (!email) {
+          alert("Por favor, preencha seu e-mail.");
+          form.email.focus();
+          return;
+        }
+
+        if (!paymentMethod) {
+          alert("Por favor, selecione uma forma de pagamento.");
+          return;
+        }
+
+        if (paymentMethod === "card") {
+          const cardNumber = form.cardNumber.value.trim();
+          const cardExpiry = form.cardExpiry.value.trim();
+          const cardCvv = form.cardCvv.value.trim();
+
+          if (!cardNumber) {
+            alert("Por favor, preencha o número do cartão.");
+            form.cardNumber.focus();
+            return;
+          }
+          if (!cardExpiry) {
+            alert("Por favor, preencha a validade do cartão.");
+            form.cardExpiry.focus();
+            return;
+          }
+          if (!cardCvv) {
+            alert("Por favor, preencha o CVV do cartão.");
+            form.cardCvv.focus();
+            return;
+          }
+        }
+
+        alert(`Pagamento realizado com sucesso!\n\nNome: ${name}\nEmail: ${email}\nForma: ${paymentMethod.toUpperCase()}`);
+
+        form.reset();
+        atualizarCampos(); // para esconder tudo após reset
+      });
+    });
+  </script>
+
+</body>
+</html>
