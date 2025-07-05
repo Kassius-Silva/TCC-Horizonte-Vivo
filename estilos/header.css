@@ -62,3 +62,13 @@ nav {
     padding: 0;
     
 }
+
+@media (max-width:768px)  {
+    #link-principal {
+        display: none;
+    }
+    nav {
+        justify-content: center;
+    }
+
+}

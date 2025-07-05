@@ -31,3 +31,15 @@
     display: flex;
     gap: 20px;
 }
+
+@media (max-width:768px) {
+    .footer {
+    text-align: center;
+}
+
+.footer .link {
+width: 150px;
+display: none;
+}
+
+}
