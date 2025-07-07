@@ -62,13 +62,33 @@ nav {
     padding: 0;
     
 }
+#hamburguer {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+@media (max-width:768px) {
+      #link-principal {
+    display: none;
+    flex-direction: column;
+    background-color: var(--destaque);
+    position: absolute;
+    top: 60px; /* ajuste conforme a altura do seu header */
+    right: 10px;
+    box-shadow: 0 2px 10px rgba(17, 11, 11, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+  }
 
-@media (max-width:768px)  {
-    #link-principal {
-        display: none;
+  /* Exibe o menu quando ativo */
+  #link-principal.ativo {
+    display: flex;
+  }
+    #hamburguer {
+        display: block;
     }
-    nav {
-        justify-content: center;
-    }
-
+    
 }

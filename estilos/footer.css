@@ -32,14 +32,44 @@
     gap: 20px;
 }
 
-@media (max-width:768px) {
-    .footer {
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 10px;
+    height: auto;
+  }
+
+  #contatos {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .contato {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+  }
+
+  .contato img {
+    margin-bottom: 10px;
+  }
+
+  #redes {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .contato .link {
+  font-size: 0; /* Remove o texto visualmente */
+  justify-content: center;
 }
 
-.footer .link {
-width: 150px;
-display: none;
-}
-
+.contato .link img {
+  font-size: initial; /* Garante que o ícone mantenha o tamanho */
+  width: 30px;
+}   
+  .rede {
+    width: 40px !important;
+  }
 }
