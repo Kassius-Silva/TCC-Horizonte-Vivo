@@ -30,3 +30,26 @@ img {
     
     color: var(--alerta);
 }
+
+@media (max-width:768px) {
+    .box {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 20px;
+    }
+    .texto {
+        border-left: none;
+        text-align: center;
+        width: 100%;
+    }
+    img {
+        width: 100%;
+    }
+    .type {
+        width: 100%;
+    }
+    .texto {
+        padding: 0 !important;
+    }
+}

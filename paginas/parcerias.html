@@ -32,6 +32,9 @@
                 <li><a href="./parcerias.html" class="link ativo">Parceria</a></li>
                 <li><a href="./contato.html" class="link">Contato</a></li>
             </ul>
+            <button id="hamburguer" aria-label="Abrir menu de navegação">
+                ☰
+              </button>
         </nav>
     </header>
    <section id="pagina">
@@ -95,5 +98,13 @@
     <script>
       new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
+      <script>
+        const botaoHamburguer = document.getElementById("hamburguer");
+        const menuPrincipal = document.getElementById("link-principal");
+      
+        botaoHamburguer.addEventListener("click", () => {
+          menuPrincipal.classList.toggle("ativo");
+        });
+      </script>
 </body>
 </html>

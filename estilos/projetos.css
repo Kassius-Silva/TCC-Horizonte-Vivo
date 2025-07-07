@@ -116,3 +116,30 @@ main {
 .card:hover .descricao {
   opacity: 1;
 }
+
+@media (max-width: 768px) {
+  .carousel {
+    width: 400px;
+    height: 300px;
+  }
+  
+  .slide img {
+    object-fit: cover;
+  }
+  
+  .caption {
+    font-size: 18px;
+    bottom: 20px;
+    left: 20px;
+  }
+  
+  .prev, .next {
+    font-size: 24px;
+    padding: 5px;
+  }
+  
+  .descricao {
+    font-size: 14px;
+    padding: 3px 6px;
+  }
+}

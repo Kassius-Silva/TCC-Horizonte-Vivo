@@ -29,3 +29,29 @@ img {
     width: 70%;
     gap: 20px;
 }
+
+@media (max-width:768px) {
+    #pagina {
+        height: auto;
+        padding: 20px;
+    }
+    #conteudo {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    #texto {
+        border-right: none;
+        padding-right: 0;
+        text-align: center;
+    }
+    #parcerias {
+        justify-content: center;
+    }
+    img {
+        width: 100px;
+    }
+    .descricao {
+        width: 100%;
+    }
+}
